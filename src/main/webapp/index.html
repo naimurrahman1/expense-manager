@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <!-- Load the jQuery and jQuery UI libraries for the datepicker -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+    <script>
+  $(function() {
+    $("#date").datepicker();
+  });
+
+    </script>
+
+</head>
+<body>
+<h1>Expense Tracker</h1>
+<form action="connect.jsp" method="post">
+    <label for="category">Expense Category:</label>
+    <select id="category" name="category">
+        <option value="Transportation">Transportation</option>
+        <option value="Food">Food</option>
+        <option value="Fees">Fees</option>
+        <option value="Bills">Bills</option>
+        <option value="Entertainment">Entertainment</option>
+    </select>
+
+    <label for="date">Date:</label>
+    <input type="text" id="date" name="date">
+
+    <label for="name">Expense Name:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea>
+
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" name="amount">
+
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
